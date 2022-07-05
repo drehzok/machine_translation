@@ -5,9 +5,21 @@ Generated using `state.txt` from [tree.nathanfriend.io](tree.nathanfriend.io)
 ```
 src
 ├── utils
-│   └── basic
-│       ├── freeze_params
-│       └── subsequent_mask
+│   ├── basic
+│   │   ├── freeze_params
+│   │   └── subsequent_mask
+│   ├── vocab
+│   │   ├── Vocabulary
+│   │   ├── TextVocabulary
+│   │   ├── GlossVocabulary
+│   │   ├── filter_min
+│   │   ├── sort_and_cut
+│   │   └── build_vocab
+│   └── initialization
+│       ├── orthogonal_rnn_init_
+│       ├── lstm_forget_gate_init_
+│       ├── xavier_uniform_n_
+│       └── initialize_model
 └── models
     └── components
         ├── attention
@@ -22,18 +34,18 @@ src
         │   ├── TransformerEncoderLayer
         │   ├── RecurrentEncoder
         │   └── TransformerEncoder
-        └── decoders
-            ├── Decoder
-            ├── TransformerDecoderLayer
-            ├── RecurrentDecoder
-            └── TransformerDecoder
+        ├── decoders
+        │   ├── Decoder
+        │   ├── TransformerDecoderLayer
+        │   ├── RecurrentDecoder
+        │   └── TransformerDecoder
+        └── signtransformer
 ```
 
 
 To-do:
 ```python
 # Probably this must be placed in src.utils
-from signjoey.initialization import initialize_model
 from signjoey.search import beam_search, greedy
 from signjoey.batch import Batch
 
