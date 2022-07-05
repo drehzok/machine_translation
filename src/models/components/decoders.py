@@ -1,5 +1,6 @@
 import torch
 import math
+from typing import Optional
 from torch import nn
 from src.utils import freeze_params, subsequent_mask
 from src.models.components import (MultiHeadedAttention, 

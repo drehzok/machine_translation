@@ -28,3 +28,16 @@ src
             ├── RecurrentDecoder
             └── TransformerDecoder
 ```
+
+
+To-do:
+```python
+# Probably this must be placed in src.utils
+from signjoey.initialization import initialize_model
+from signjoey.search import beam_search, greedy
+from signjoey.batch import Batch
+
+# This must be placed in src.models.components
+from signjoey.embeddings import Embeddings, SpatialEmbeddings
+import signjoey.model
+```

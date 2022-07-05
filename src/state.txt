@@ -3,6 +3,13 @@ src
         basic
             freeze_params
             subsequent_mask
+        vocab
+            Vocabulary
+            TextVocabulary
+            GlossVocabulary
+            filter_min
+            sort_and_cut
+            build_vocab
     models
         components
             attention
